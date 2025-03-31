@@ -1,0 +1,38 @@
+  {
+    "name": "algorithms",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "build": "tsc",
+      "lint": "eslint . --ext .ts",
+      "test": "jest",
+      "start": "npm run build && node dist/index.js",
+      "file": "npm run build && FILE=$(find dist -type f -name \"*$npm_config_name*.js\" | head -n 1) && echo \"Executing: $FILE\" && node \"$FILE\""
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/lingminkong/algorithms.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "module",
+    "bugs": {
+      "url": "https://github.com/lingminkong/algorithms/issues"
+    },
+    "homepage": "https://github.com/lingminkong/algorithms#readme",
+    "description": "",
+    "devDependencies": {
+      "@eslint/js": "^9.23.0",
+      "@types/jest": "^29.5.14",
+      "@types/node": "^22.13.13",
+      "@typescript-eslint/eslint-plugin": "^8.27.0",
+      "@typescript-eslint/parser": "^8.27.0",
+      "eslint": "^9.23.0",
+      "globals": "^16.0.0",
+      "jest": "^29.7.0",
+      "ts-jest": "^29.3.0",
+      "typescript": "^5.8.2",
+      "typescript-eslint": "^8.27.0"
+    }
+  }
