@@ -10,4 +10,4 @@ From the initial look, the number of elements in smaller or larger array after t
 
 ## notes
 
-We cannot use `array.length === 1` as base case, as there are chances that the smaller array or larger array is empty, so the base case we use should be `array.length === 0`;
+We cannot use `array.length === 1` as the base case, as there are chances that the smaller array or larger array is empty, so the base case should be `array.length === 0`;
