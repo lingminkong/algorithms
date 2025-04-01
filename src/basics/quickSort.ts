@@ -1,3 +1,33 @@
-import { add } from '../index.js';
+let count = 0;
 
-add(4, 2);
+const quickSort = (array: number[]): number[] => {
+  if (array.length === 0) {
+    return [];
+  }
+
+  const pivotIndex = Math.floor(array.length / 2);
+  const pivot = array[pivotIndex];
+
+  const smallerArray = [];
+  const largerArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (i === pivotIndex) {
+      continue;
+    }
+    count += 1;
+    const value = array[i];
+
+    if (value <= pivot) {
+      smallerArray.push(value);
+    } else {
+      largerArray.push(value);
+    }
+  }
+
+  return [...quickSort(smallerArray), pivot, ...quickSort(largerArray)];
+};
+
+const array = [77, 12, 3, 1, 4, 6, 2, 5, 3, 9];
+
+console.log(quickSort(array));
+console.log(`count=${count}`);
