@@ -18,6 +18,9 @@ Breadth-first search algorithm, as its name states, always searches from the fir
    2. if no, mark this element as checked and enqueue all direct neighbors of this element
 5. loop through the queue
 
+
+> BFS needs to search the list items **in the order they were added to the list**, otherwise it cannot get the shortest path. That's why a queue is needed for BFS.
+
 ## runtime analysis
 
 *The Big O performance of this algorithm is O(V+E), vertices + edges of the graph. why it is not 2E?*
