@@ -10,10 +10,10 @@ __*Thoughts: The middle element does not necessarily mean it is the middle eleme
 
 The pivot is critical to quick sort algorithm. It determines how the array is split in each recursive call. The efficiency of the quick sort depends on how balanced these splits are.
 
-Always picking the first, last or medium element is not the best strategy, it increases the chance of having the worst performance, which is `O(n2`);
+Always picking the first, last or medium element is not the best strategy, it increases the chance of having the worst performance, which is `O(n*n)`;
 
 For example:
-Given an array [1, 2, 3, 4, 5] and always pick the first element as the pivot, quick sort has to go through the entire array n times.
+Given an array [1, 2, 3, 4, 5] and always pick the first element as the pivot, quick sort has to go through the entire array n times. ⬇️
 
 ```
 1. [], 1, [2, 3, 4, 5]
@@ -31,9 +31,9 @@ const pivot = arr[pivotIndex];
 
 ---
 
-__*Thoughts: From the initial look, the number of elements in smaller or larger array after the split does not matter in terms of space/time complexity. And the BigO is O(n2)?*__
+__*Thoughts: From the initial look, the number of elements in smaller or larger array after the split does not matter in terms of space/time complexity. And the BigO is O(n*n)?*__
 
-As shown above, the worst case is `O(n2)`, and the average/best case is `O(nlogn)`.
+As shown above, the worst case is `O(n*n)`, and the average/best case is `O(n*logn)`.
 
 ## notes
 
