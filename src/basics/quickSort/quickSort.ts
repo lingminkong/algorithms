@@ -1,11 +1,12 @@
 let count = 0;
 
 const quickSort = (array: number[]): number[] => {
-  if (array.length === 0) {
-    return [];
+  if (array.length <= 1) {
+    return array;
   }
 
-  const pivotIndex = Math.floor(array.length / 2);
+  // randomize the pivot element
+  const pivotIndex = Math.floor(Math.random() * array.length);
   const pivot = array[pivotIndex];
 
   const smallerArray = [];
